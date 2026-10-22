@@ -7,14 +7,6 @@ const nextConfig = {
       { protocol: "https", hostname: "media.discordapp.net" },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: "/posts/:slug/images/:path*",
-        destination: "/api/posts/:slug/images/:path*",
-      },
-    ];
-  },
 };
 
 export default nextConfig;
