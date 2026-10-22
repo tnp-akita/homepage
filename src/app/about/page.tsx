@@ -2,7 +2,6 @@
 
 import Iframe from "react-iframe";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 import styles from "./page.module.css";
 import SimpleTNPMap from "@/components/map/SimpleTNPMap";
@@ -10,13 +9,6 @@ import { CONTACT_FORM_URL } from "@/consts/CONTACT_FORM_URL";
 import HeaderImage from "@/components/headerImage/HeaderImage";
 
 export default function About() {
-  const [windowHeight, setWindowHeight] = useState(0);
-  useEffect(() => {
-    // window is only readable after mount; this page is prerendered.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setWindowHeight(window.innerHeight);
-  }, []);
-
   return (
     <div className={styles.Background}>
       <HeaderImage />
@@ -74,9 +66,7 @@ export default function About() {
               url={
                 "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d322.5534641710882!2d140.13480373670654!3d39.724757162846565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8fc298e534e24d%3A0xd57758679f66e202!2z44CSMDEwLTA4NTIg56eL55Sw55yM56eL55Sw5biC5omL5b2i5a2m5ZyS55S677yRIOOCteODvOOCr-ODq-ajnw!5e0!3m2!1sja!2sjp!4v1709558116298!5m2!1sja!2sjp"
               }
-              max-width="800"
-              width="80%"
-              height={(windowHeight / 2).toString()}
+              className={styles.MapFrame}
               styles={{ border: "0" }}
               allowFullScreen={false}
               loading="lazy"
