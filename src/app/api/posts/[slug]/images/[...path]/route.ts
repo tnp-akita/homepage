@@ -5,8 +5,9 @@ import { lookup } from 'mime-types';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string; path: string[] } }
+  props: { params: Promise<{ slug: string; path: string[] }> }
 ) {
+  const params = await props.params;
   try {
     const { slug, path: imagePath } = params;
     const fileName = imagePath.join('/');
