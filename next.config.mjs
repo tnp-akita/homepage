@@ -1,24 +1,13 @@
-import nextPWA from "next-pwa";
-
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["nicovideo.cdn.nimg.jp", "media.discordapp.net"],
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/posts/:slug/images/:path*",
-        destination: "/api/posts/:slug/images/:path*",
-      },
-    ];
+    unoptimized: true,
+    remotePatterns: [
+      { protocol: "https", hostname: "nicovideo.cdn.nimg.jp" },
+      { protocol: "https", hostname: "media.discordapp.net" },
+    ],
   },
 };
 
-const withPWA = nextPWA({
-  dest: "public",
-  disable: process.env.NODE_ENV === "development",
-});
-
-export default withPWA(nextConfig);
+export default nextConfig;
