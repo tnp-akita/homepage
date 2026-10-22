@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 const pageUrl = `${baseUrl}/blog`;
-const ogImage = `${baseUrl}/TNPheader.webp`;
+const ogImage = `${baseUrl}/brand/TNPheader.webp`;
 
 export const metadata: Metadata = {
   title: 'ブログ | 秋田大学プログラミングサークルTNP',

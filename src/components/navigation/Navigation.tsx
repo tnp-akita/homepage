@@ -17,12 +17,12 @@ const Navigation = () => {
     return (
         <nav className={`${styles.Navigation} ${isOpen ? styles.NavigationOpen : ""}`}>
             <div className={styles.NavigationClose} onClick={toggleOpen}>
-                <img src={"/close.svg"} alt={"close"} />
+                <img src={"/ui/close.svg"} alt={"close"} />
             </div>
             <div className={styles.NavigationTop}>
                 <div className={styles.Logo}>
                     <Link href={"/"} onClick={toggleOpen}>
-                        <Image className={styles.LogoImage} src={"/logo_light.svg"} alt={"TNP Logo"} width={2880} height={1080} />
+                        <Image className={styles.LogoImage} src={"/brand/logo_light.svg"} alt={"TNP Logo"} width={2880} height={1080} />
                     </Link>
                 </div>
                 <div className={styles.Links}>
@@ -36,7 +36,7 @@ const Navigation = () => {
             </div>
             <div className={styles.NavigationBottom}>
                 <a href="https://twitter.com/tnp_akita">
-                    <img className={styles.X} src="/X-logo.svg" alt="X" />
+                    <img className={styles.X} src="/brand/X-logo.svg" alt="X" />
                 </a>
                 <p>
                     © 2024 TNP

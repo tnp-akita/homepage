@@ -7,7 +7,7 @@ import styles from "./SimpleTNPMap.module.css";
  */
 export default function SimpleTNPMap(props: SimpleTNPMapProps) {
     return <div>
-        <img src="/TNP-Location.min.svg" className={ `${styles.TNPMap} ${props.enableDarkMode ? styles.Dark : styles.Light}` } alt="手形キャンパスの各箇所からTNPの部室への地図"/>
+        <img src="/map/TNP-Location.min.svg" className={ `${styles.TNPMap} ${props.enableDarkMode ? styles.Dark : styles.Light}` } alt="手形キャンパスの各箇所からTNPの部室への地図"/>
     </div>
 }
 

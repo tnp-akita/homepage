@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./HeaderImage.module.css"
-import headerImage from "/public/TNPheader.webp";
+import headerImage from "/public/brand/TNPheader.webp";
 
 export default function HeaderImage() {
   return <header className={styles.HeaderImageWrapper}>
