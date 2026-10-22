@@ -12,10 +12,10 @@ const Header = () => {
     return (
         <header className={styles.Header}>
             <div className={styles.HeaderIcon} onClick={toggleOpen}>
-                <img src="/menu.svg" alt="menu" />
+                <img src="/ui/menu.svg" alt="menu" />
             </div>
             <Link href={"/"} className={styles.HeaderLogo}>
-                <img src="/white_logo_small.svg" alt="TNP Logo" />
+                <img src="/brand/white_logo_small.svg" alt="TNP Logo" />
                 TNP
             </Link>
             <div className={styles.HeaderIcon}>

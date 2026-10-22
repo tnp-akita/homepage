@@ -25,7 +25,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       <div className={styles.thumbnailContainer}>
         {hasThumbnail ? (
           <Image
-            src={post.thumbnail || "/default_post_thumbnail.png"}
+            src={post.thumbnail || "/brand/default_post_thumbnail.png"}
             alt={post.thumbnailAlt || post.title}
             fill
             className={styles.thumbnail}

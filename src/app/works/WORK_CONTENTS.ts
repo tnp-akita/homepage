@@ -3,13 +3,13 @@ import { Work } from "@/types/Work"
 
 const CorelynxImages: GamePreviewImage[] = [
     {
-        imageSrc: "/Corelynx1.webp",
+        imageSrc: "/works/corelynx/1.webp",
         displayName: "Corelynx1",
         width: 768,
         height: 432
     },
     {
-        imageSrc: "/Corelynx2.webp",
+        imageSrc: "/works/corelynx/2.webp",
         displayName: "Corelynx2",
         width: 768,
         height: 432
@@ -26,13 +26,13 @@ const Corelynx: Work = {
 
 const VergiliusImages: GamePreviewImage[] = [
     {
-        imageSrc: "/Vergilius1.webp",
+        imageSrc: "/works/vergilius/1.webp",
         displayName: "Vergilius1",
         width: 768,
         height: 432
     },
     {
-        imageSrc: "/Vergilius2.webp",
+        imageSrc: "/works/vergilius/2.webp",
         displayName: "Vergilius2",
         width: 768,
         height: 432
