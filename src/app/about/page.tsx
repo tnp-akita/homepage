@@ -12,6 +12,8 @@ import HeaderImage from "@/components/headerImage/HeaderImage";
 export default function About() {
   const [windowHeight, setWindowHeight] = useState(0);
   useEffect(() => {
+    // window is only readable after mount; this page is prerendered.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setWindowHeight(window.innerHeight);
   }, []);
 

@@ -2,7 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["nicovideo.cdn.nimg.jp", "media.discordapp.net"],
+    remotePatterns: [
+      { protocol: "https", hostname: "nicovideo.cdn.nimg.jp" },
+      { protocol: "https", hostname: "media.discordapp.net" },
+    ],
   },
   async rewrites() {
     return [
