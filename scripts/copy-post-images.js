@@ -14,8 +14,10 @@ const OUTPUT_DIR = path.join(__dirname, '../public/posts');
 
 fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
 
+const slugs = fs.existsSync(POSTS_DIR) ? fs.readdirSync(POSTS_DIR) : [];
+
 let copiedCount = 0;
-for (const slug of fs.readdirSync(POSTS_DIR)) {
+for (const slug of slugs) {
   const imagesDir = path.join(POSTS_DIR, slug, 'images');
   if (!fs.existsSync(imagesDir)) {
     continue;
