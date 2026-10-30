@@ -5,12 +5,11 @@ import BlogContent from "@/components/blog/BlogContent";
 import styles from "./page.module.css";
 
 interface BlogPostPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: BlogPostPageProps): Promise<Metadata> {
+export async function generateMetadata(props: BlogPostPageProps): Promise<Metadata> {
+  const params = await props.params;
   const post = getBlogPost(params.slug);
 
   if (!post) {
@@ -71,6 +70,9 @@ export async function generateMetadata({
   };
 }
 
+// 記事はすべてビルド時に生成する。未知の slug は Worker で描画せず 404 にする
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const slugs = getBlogPostSlugs();
 
@@ -79,7 +81,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage(props: BlogPostPageProps) {
+  const params = await props.params;
   const post = getBlogPost(params.slug);
 
   if (!post) {
