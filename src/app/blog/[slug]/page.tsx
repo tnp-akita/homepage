@@ -70,6 +70,9 @@ export async function generateMetadata(props: BlogPostPageProps): Promise<Metada
   };
 }
 
+// 記事はすべてビルド時に生成する。未知の slug は Worker で描画せず 404 にする
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const slugs = getBlogPostSlugs();
 
