@@ -23,7 +23,7 @@ export async function generateMetadata(props: BlogPostPageProps): Promise<Metada
   const pageUrl = `${baseUrl}/blog/${params.slug}`;
   const ogImage = post.thumbnail
     ? `${baseUrl}${post.thumbnail}`
-    : `${baseUrl}/default_post_thumbnail.png`;
+    : `${baseUrl}/brand/default_post_thumbnail.png`;
 
   return {
     title: `${post.title} | TNP Blog`,

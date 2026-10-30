@@ -23,7 +23,7 @@ export var TestPersona: Persona = {
         "\n" +
         "今日ないだかきまっ英文を承て、この手段は立派なく明らかないと溯っませのたは伴っでます、よろしゅう会の中をするます個人な潰すと行かでならたものましあっ。またそれは平凡つが起るでしのましはない、余計ますてすれないものならと云いとそれの兄の手をその主義を批評できるからいるましまし。\n",
     displayName: "Hello I am persona",
-    iconSrc: "/vercel.svg",
+    iconSrc: "/icon/icon-192x192.png",
     primaryColor: "#00FF00",
     secondaryColor: "#FF0000",
     backgroundColor: "#eeeeee",
